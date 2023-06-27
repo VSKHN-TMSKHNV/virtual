@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="monitor">
+      <div class="display-wrapper">
+        <div class="display"></div>
+    </div>  
+    <button class="button clear" type="button">Очистить</button>
+    </section>
+    
+    <section class="keybord">
+        <div class="keyboard-row">
+            <button class="button key" id="index_1">й</button>
+            <button class="button key" id="index_2">ц</button>
+            <button class="button key" id="index_3">у</button>
+            <button class="button key" id="index_4">к</button>
+            <button class="button key" id="index_5">е</button>
+            <button class="button key" id="index_6">н</button>
+            <button class="button key" id="index_7">г</button>
+            <button class="button key" id="index_8">ш</button>
+            <button class="button key" id="index_9">щ</button>
+            <button class="button key" id="index_10">з</button>
+            <button class="button key" id="index_11">х</button>
+            <button class="button key" id="index_12">ъ</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="button key" id="index_13">ф</button>
+            <button class="button key" id="index_14">ы</button>
+            <button class="button key" id="index_15">в</button>
+            <button class="button key" id="index_16">а</button>
+            <button class="button key" id="index_17">п</button>
+            <button class="button key" id="index_18">р</button>
+            <button class="button key" id="index_19">о</button>
+            <button class="button key" id="index_20">л</button>
+            <button class="button key" id="index_21">д</button>
+            <button class="button key" id="index_22">ж</button>
+            <button class="button key" id="index_23">э</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="button key" id="index_24">я</button>
+            <button class="button key" id="index_25">ч</button>
+            <button class="button key" id="index_26">с</button>
+            <button class="button key" id="index_27">м</button>
+            <button class="button key" id="index_28">и</button>
+            <button class="button key" id="index_29">т</button>
+            <button class="button key" id="index_30">ь</button>
+            <button class="button key" id="index_31">б</button>
+            <button class="button key" id="index_32">ю</button>
+            <button class="button key" id="index_33">.</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="button key space" id="index_34"> </button>
+        </div>
+    </section>
+
+    <script> 
+
+    let keys = document.querySelectorAll('.key');
+
+    let clear = document.querySelector('.clear');
+
+    let display = document.querySelector('.display');
+
+    let text = document.createElement('p');
+
+
+clear.onclick = function(){
+  display.textContent='';
+  }
+
+ for(let i=0; i<keys.length; i++){
+  
+ keys[i].onclick = function(){
+   text=(keys[i]);
+   display.append(text.textContent);
+   } 
+}
+  </script>
+</body>
+</html>
